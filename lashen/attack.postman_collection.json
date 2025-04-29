@@ -1,0 +1,511 @@
+{
+	"info": {
+		"_postman_id": "a44ad4e1-f2aa-4d2b-bd2d-1eb32abe42df",
+		"name": "attack",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26559195"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "signUp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\":\"Magdy Badr\",\r\n    \"phone\":\"01150077129\",\r\n    \"password\":\"Aa@12345\",\r\n    \"role\" : \"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/auth/signUp",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"signUp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"phone\":\"01150077129\",\r\n    \"password\":\"Aa@12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/auth/logIn",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"logIn"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "Route__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODU3NmM1MjBkYjY2ZmRkOTBlNTk0MCIsImVtYWlsIjoiYWhtZWRAZ21haWwuY29tIiwidXNlcm5hbWUiOiJBaG1lZCIsImlhdCI6MTcwMzI0NTgyOH0.UuhJtdg1gCwMbVcaB7VUy5SLP__USszzLYSUN51Lcsk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\":\"Badr\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/auth/680764f27d4beb679205a4dc",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"680764f27d4beb679205a4dc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "Route__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODU3NmM1MjBkYjY2ZmRkOTBlNTk0MCIsImVtYWlsIjoiYWhtZWRAZ21haWwuY29tIiwidXNlcm5hbWUiOiJBaG1lZCIsImlhdCI6MTcwMzI0NTgyOH0.UuhJtdg1gCwMbVcaB7VUy5SLP__USszzLYSUN51Lcsk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/auth/680764f27d4beb679205a4dc",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"680764f27d4beb679205a4dc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get one",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/auth/680764f27d4beb679205a4dc",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"680764f27d4beb679205a4dc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/auth/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "attack",
+			"item": [
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "Route__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODU3YTZkMjBkYjY2ZmRkOTBlNTk3YiIsImVtYWlsIjoiYWxpQGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiQWxpIiwiaWF0IjoxNzAzMjQ2NDUwfQ.jaoCNy1_LxikcJzkDP-XKCzBlz7kGnW34DFPWpsm3MM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\" : \"Defenders\",\r\n    \"description\" : \"any\",\r\n    \"reportedBy\" : \"680764f27d4beb679205a4dc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/attack/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"attack",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "Route__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODEwY2RhMDVhYmY5N2RlNmE4ZDRjZSIsImVtYWlsIjoiYWJkZWxyYWhtbmFAZ21haWwuY29tIiwidXNlcm5hbWUiOiJBYmRlbCBSYWhtYW4gSG9zc2FtIiwiaWF0IjoxNzAyOTU2OTk1fQ.ptNiF8h7ZhsDgDZSvCIabFsXdQkbnN-VYqszDPr9XoA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\" : \"Defenders 1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/attack/68076809472d581770a2908c",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"attack",
+								"68076809472d581770a2908c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete task",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/attack/68076809472d581770a2908c",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"attack",
+								"68076809472d581770a2908c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get one",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/attack/68076809472d581770a2908c",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"attack",
+								"68076809472d581770a2908c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "Route__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODU3YTZkMjBkYjY2ZmRkOTBlNTk3YiIsImVtYWlsIjoiYWxpQGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiQWxpIiwiaWF0IjoxNzAzMjQ2NDUwfQ.jaoCNy1_LxikcJzkDP-XKCzBlz7kGnW34DFPWpsm3MM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/attack/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"attack",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "quiz",
+			"item": [
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "Route__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODU3YTZkMjBkYjY2ZmRkOTBlNTk3YiIsImVtYWlsIjoiYWxpQGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiQWxpIiwiaWF0IjoxNzAzMjQ2NDUwfQ.jaoCNy1_LxikcJzkDP-XKCzBlz7kGnW34DFPWpsm3MM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Python Fundamentals Quiz\",\r\n  \"questions\": [\r\n    {\r\n      \"questionText\": \"Which keyword is used to define a function in Python?\",\r\n      \"options\": [\"def\", \"function\", \"lambda\", \"define\"],\r\n      \"correctAnswer\": \"def\"\r\n    },\r\n    {\r\n      \"questionText\": \"What is the output of: `print(type([]))` in Python?\",\r\n      \"options\": [\"<class 'list'>\", \"<class 'dict'>\", \"<class 'set'>\", \"<class 'tuple'>\"],\r\n      \"correctAnswer\": \"<class 'list'>\"\r\n    },\r\n    {\r\n      \"questionText\": \"Which of the following is used to handle exceptions in Python?\",\r\n      \"options\": [\"try-except\", \"catch-throw\", \"error-catch\", \"if-else\"],\r\n      \"correctAnswer\": \"try-except\"\r\n    }\r\n  ]\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/quiz/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"quiz",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "Route__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODEwY2RhMDVhYmY5N2RlNmE4ZDRjZSIsImVtYWlsIjoiYWJkZWxyYWhtbmFAZ21haWwuY29tIiwidXNlcm5hbWUiOiJBYmRlbCBSYWhtYW4gSG9zc2FtIiwiaWF0IjoxNzAyOTU2OTk1fQ.ptNiF8h7ZhsDgDZSvCIabFsXdQkbnN-VYqszDPr9XoA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\" : \"Defenders 1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/quiz/68076809472d581770a2908c",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"quiz",
+								"68076809472d581770a2908c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/quiz/68076f646231fa5fe82c7982",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"quiz",
+								"68076f646231fa5fe82c7982"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get one",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/quiz/68076f646231fa5fe82c7982",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"quiz",
+								"68076f646231fa5fe82c7982"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "Route__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODU3YTZkMjBkYjY2ZmRkOTBlNTk3YiIsImVtYWlsIjoiYWxpQGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiQWxpIiwiaWF0IjoxNzAzMjQ2NDUwfQ.jaoCNy1_LxikcJzkDP-XKCzBlz7kGnW34DFPWpsm3MM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/quiz/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"quiz",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "feedback",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user\" : \"680764f27d4beb679205a4dc\",\r\n    \"content\" : \"Good student\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/feedback/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"feedback",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/feedback/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"feedback",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get one",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/feedback/680770e1a5cb493cd7b61600",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"feedback",
+								"680770e1a5cb493cd7b61600"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
