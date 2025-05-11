@@ -6,6 +6,7 @@ const attackSchema = new Schema(
   {
     type: { type: String, required: true },
     description: { type: String },
+    video : { type: String},
     reportedBy: {
       type: Types.ObjectId,
       ref: USER,
